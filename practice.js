@@ -21,14 +21,20 @@ Strings are both treated as literals and objects
 
 let a = "A" ;
 let b = "AA" ;
-if(a<b){
-    console.log(`${a} is greater than ${b}`) ;
+// if(a<b){
+//     console.log(`${a} is greater than ${b}`) ;
+// }
+
+// else if(b>a) {
+//     console.log(`${b} is greater than ${a}`)
+// }
+
+// else{
+//     console.log("Both are equal") ;
+// }
+
+let areEqual =  function(str1, str2) {
+    return str1.toUpperCase() === str2.toUpperCase() ;
 }
 
-else if(b>a) {
-    console.log(`${b} is greater than ${a}`)
-}
-
-else{
-    console.log("Both are equal") ;
-}
+console.log(areEqual(a,b)) ;
