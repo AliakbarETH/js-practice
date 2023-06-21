@@ -1,66 +1,102 @@
-// // /*
-// // Strings are both treated as literals and objects
+// // 
+// const mypromise = new Promise((success, response) => {
+//     let x = 0 ;
+//     if(x==0) 
+//     {
+//         return success("I am success response") ;
 
-// // */
+//     }
+//     else{
+//         return response("I am error") ;
+//     }
 
-// // // let a = "I am a literal String" ;
-// // // let b = new String("I am an Object String") ;
+// })
 
-// // // // console.log(a) ;
-// // // // console.log(b) ;
+// console.log(mypromise) ;
 
-// // // for(let i = 0 ; i < a.length ; i++){
-// // //     console.log(a.charAt(i)) ;
+// console.log(typeof(mypromise)) ;
+
+// // (() => {
+// //     mypromise.then(result)
+// // })() ;
+
+
+let countHour = 0 ;
+let countMin = 0 ;
+let countSec = 0 ;
+
+
+
+// let clock = function(){
+//     for(let i = 0 ; i < 60 ; i++){
+//         countSec++ ;
+
+//         console.log(countSec) ;
+//     }
+
+//     // if(countsec >){
+//     //     countMin++ 
+//     // }
+
+//     if(countSec == 60){
+//         countMin++ ;
+//         countSec = 0 ;
+//     }
+//     console.log("Min") ;
+//     console.log(countMin) ;
+
+
+//     for(let i = 0 ; i < 60 ; i++) {
+//         countMin++ ;
+//     }
+
+//     console.log("")
     
-// // // }
+//     if(countMin)
 
-// // // for(let i = 0 ; i < a.length ; i++){
-// // //     console.log(b.charAt(i)) ;
-    
-// // // }
+// }
 
-// // let a = "A" ;
-// // let b = "AA" ;
-// // // if(a<b){
-// // //     console.log(`${a} is greater than ${b}`) ;
-// // // }
+// clock() ;
 
-// // // else if(b>a) {
-// // //     console.log(`${b} is greater than ${a}`)
-// // // }
+let countMinutes = 0 ;
+let countHours = 0 ;
+let currentSeconds = 0 ;
 
-// // // else{
-// // //     console.log("Both are equal") ;
-// // // }
+// let currentSeconds = new Date().getSeconds() ;
+// console.log(typeof(currentSeconds)) ;
 
-// // let areEqual =  function(str1, str2) {
-// //     return str1.toUpperCase() === str2.toUpperCase() ;
-// // }
+let min = function(currentSeconds){
+    if(currentSeconds <=60) {
+        if(currentSeconds == 60) 
+        {
+            countMinutes++ ;
+        }
+        return countMinutes ;
 
-// // console.log(areEqual(a,b)) ;
+    }
+   
+}
 
-// // typeof(intl.Collator) ;
+let hours = function(countMinutes) {
+    if(countMinutes == 60) {
+        countHours++
+    }
+    return countHours ;
+}
 
 
-// // let a = ['z', 'b'] ;
-// // let b = 'z' ;
-// // console.log(typeof(a)) ;
-// // console.log(typeof(b)) ;
 
-// let c = "Ali" ;
-// let d = "Ali" ;
-// console.log(c===d) ;
+let clock = function(){
+    for(let i = 0 ; i < 60 ; i ++){
+        currentSeconds++ ;
+    }
 
-// // global = function declaration
-// // local = function experession
+    // min(currentSeconds) ;
+    // hours(countMinutes) ;
 
-// (()=>{
-//     console.log("I am ananomyus") ;
-// })();
+    console.log("Time is : " + "Seconds : " + currentSeconds + "  Minutes : " +  min(currentSeconds) + " Hours : " + hours(countMinutes) ) ;
 
-let numbers = [1,2,3,4,5] ;
-let sqNum = numbers.map((numbers) =>{
-    return numbers+1 ;
-}) ;
 
-console.log(sqNum) ;
+}
+
+clock() ;
