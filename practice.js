@@ -59,8 +59,8 @@
 // })();
 
 let numbers = [1,2,3,4,5] ;
-let sqNum = numbers.map(() =>{
-    return numbers ;
+let sqNum = numbers.map((numbers) =>{
+    return numbers+1 ;
 }) ;
 
 console.log(sqNum) ;
