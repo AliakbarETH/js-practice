@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./index.js">
+</head>
+<body>
+    <div class="container" id="login-form">
+        <h2>Login Form</h2>
+        <form>
+          <input type="text" placeholder="Username" required>
+          <input type="password" placeholder="Password" required>
+          <input type="submit" value="Login" onclick="login()" >
+        </form>
+      </div>
+      
+      <div class="login-screen" id="login-screen">
+        <h2>Welcome, User!</h2>
+        <button onclick="logout()">Logout</button>
+      </div>
+</body>
+</html>
